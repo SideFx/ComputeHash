@@ -1,6 +1,7 @@
 Small example on how to include a Go library into a (Qt6) C++ project:
-![image](https://github.com/user-attachments/assets/df9e68d3-6c46-467f-87b6-e575fd2f6cdc)
+![Screenshot 2025-01-21 141040](https://github.com/user-attachments/assets/af393953-9f72-49dc-b8f4-4cfe92fe8662)
 
-Build libsha512.go:
+
+Build static libsha512 library:
 go build -buildmode=c-archive -o libsha512.a libsha512.go
 
