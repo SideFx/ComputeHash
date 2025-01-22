@@ -1,6 +1,6 @@
 //-------------------------------------------------------------------------------------
 // (w) 2025 by Jan Buchholz
-// Example how to link a static Go library into a C++ main file
+// Example how to link a static Go library to a C++ main file
 // Build libsha512.a: "go build -buildmode=c-archive -o libsha512.a libsha512.go"
 // This will also generate the corresponding libsha512.h C++ header file
 //-------------------------------------------------------------------------------------
