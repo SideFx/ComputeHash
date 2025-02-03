@@ -28,6 +28,9 @@
     <height>150</height>
    </size>
   </property>
+  <property name="windowIcon">
+   <iconset theme="accessories-calculator"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="btnOpenFile">
     <property name="geometry">
@@ -39,7 +42,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Open</string>
+     <string>Öffnen</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">

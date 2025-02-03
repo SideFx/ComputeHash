@@ -1,6 +1,6 @@
 //-------------------------------------------------------------------------------------
 // (w) 2025 by Jan Buchholz
-// Example how to link a static Go library to a C++ main file
+// Example how to embed a static Go library to a C++ main file
 // Build libsha512.a: "go build -buildmode=c-archive -o libsha512.a libsha512.go"
 // This will also generate the corresponding libsha512.h C++ header file
 //-------------------------------------------------------------------------------------
@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    setWindowTitle("Compute SHA512 (Call Go from C++ example)");
+    setWindowTitle("Berechne SHA512 (Aufruf Go von C++ Beispiel)");
     QObject::connect(ui->btnOpenFile, SIGNAL(clicked()), this, SLOT(OnOpenTriggered()));
 }
 
@@ -64,7 +64,7 @@ void MainWindow::OnOpenTriggered()
     openDialog.setDirectory(QStandardPaths::writableLocation(QStandardPaths::HomeLocation));
     openDialog.setAcceptMode(QFileDialog::AcceptOpen);
     openDialog.setFileMode(QFileDialog::ExistingFile);
-    openDialog.setNameFilter("Any file (*.*)");
+    openDialog.setNameFilter(tr("Alle Dateien (*.*)"));
     openDialog.setOptions(QFileDialog::ReadOnly);
     openDialog.setViewMode(QFileDialog::Detail);
     if (openDialog.exec() == QDialog::Accepted) {
